@@ -5,15 +5,15 @@
 class Cli < Formula
   desc "Interface with Ory using this CLI!"
   homepage "https://www.ory.sh"
-  version "0.0.74"
+  version "0.0.75"
   license "Apache-2.0"
   bottle :unneeded
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ory/cli/releases/download/v0.0.74/ory_0.0.74_macOS_64-bit.tar.gz"
-      sha256 "85667ee22458d70213cb851a8718f0daf557956a3c7ca381168d28160708cf0e"
+      url "https://github.com/ory/cli/releases/download/v0.0.75/ory_0.0.75_macOS_64-bit.tar.gz"
+      sha256 "5287a35b39f67299a9ae3f8c88feff153bc9320db0c2aa48927e482fe52c2d0d"
     end
   end
 
