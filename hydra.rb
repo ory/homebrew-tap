@@ -5,12 +5,12 @@
 class Hydra < Formula
   desc "Ory Hydra with SQLite Support"
   homepage "https://www.ory.sh"
-  version "1.10.7-pre.0"
+  version "1.10.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ory/hydra/releases/download/v1.10.7-pre.0/hydra_1.10.7-pre.0-sqlite_macos_64bit.tar.gz"
-      sha256 "feb0b0badd93530a9addfc93f870ff0ef079fe3c2e4624559798e835f3bfac4c"
+      url "https://github.com/ory/hydra/releases/download/v1.10.7/hydra_1.10.7-sqlite_macos_64bit.tar.gz"
+      sha256 "a84504417320894d75159fb26d3a7a3579fe393f9865deb6e1fb1d83131160ee"
 
       def install
         bin.install "hydra"
@@ -20,8 +20,8 @@ class Hydra < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/ory/hydra/releases/download/v1.10.7-pre.0/hydra_1.10.7-pre.0-sqlite_linux_64bit.tar.gz"
-      sha256 "91bcbbaf4547e57fa6a2712fbd37880bf2e11e6e860e3efa5e317f5692026f0d"
+      url "https://github.com/ory/hydra/releases/download/v1.10.7/hydra_1.10.7-sqlite_linux_64bit.tar.gz"
+      sha256 "38b9448d81703726f59d7c274fda2bba506315a2306b7cbf53ea7cfc91bc6dce"
 
       def install
         bin.install "hydra"
