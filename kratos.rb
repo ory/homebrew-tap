@@ -5,20 +5,20 @@
 class Kratos < Formula
   desc ""
   homepage "https://www.ory.sh"
-  version "0.8.0-alpha.2"
+  version "0.8.0-alpha.3"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/ory/kratos/releases/download/v0.8.0-alpha.2/kratos_0.8.0-alpha.2-sqlite_macos_64bit.tar.gz"
-      sha256 "46a9d3c602cb1ef1623075225d9078e3564faf503f991bb1a6197f5459c11e3d"
+    if Hardware::CPU.arm?
+      url "https://github.com/ory/kratos/releases/download/v0.8.0-alpha.3/kratos_0.8.0-alpha.3-sqlite_macos_arm64.tar.gz"
+      sha256 "6095723c86cea1f099b78c92fc5091eb141f813d73f7c2485accb68f79e17786"
 
       def install
         bin.install "kratos"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/ory/kratos/releases/download/v0.8.0-alpha.2/kratos_0.8.0-alpha.2-sqlite_macos_arm64.tar.gz"
-      sha256 "9e1de6ef286613f8c25c75c2a94bfbedde6572fa4cfa585d3c892e8f4dd1c040"
+    if Hardware::CPU.intel?
+      url "https://github.com/ory/kratos/releases/download/v0.8.0-alpha.3/kratos_0.8.0-alpha.3-sqlite_macos_64bit.tar.gz"
+      sha256 "bd451636af52982466512f58f18a3cf503571396f788f3fc3c8c5f406f33e514"
 
       def install
         bin.install "kratos"
@@ -28,8 +28,8 @@ class Kratos < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/ory/kratos/releases/download/v0.8.0-alpha.2/kratos_0.8.0-alpha.2-sqlite_linux_64bit.tar.gz"
-      sha256 "0d5f17950d1fc52ec77504baddaf2395d18e9a70784f98ee51a66d0b3bdd7930"
+      url "https://github.com/ory/kratos/releases/download/v0.8.0-alpha.3/kratos_0.8.0-alpha.3-sqlite_linux_64bit.tar.gz"
+      sha256 "b7170c7a0d63c99bf011f5ee5e34bd769753c35e9e834ac3a64601e22a614f41"
 
       def install
         bin.install "kratos"
