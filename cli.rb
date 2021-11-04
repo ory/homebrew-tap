@@ -5,22 +5,22 @@
 class Cli < Formula
   desc "Interface with Ory using this CLI!"
   homepage "https://www.ory.sh"
-  version "0.0.77"
+  version "0.0.78"
   license "Apache-2.0"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ory/cli/releases/download/v0.0.77/ory_0.0.77-macOS-sqlite_64-bit.tar.gz"
-      sha256 "182430c59e5076957d917e70b13a8578882bc8ce922e786c36f7c79878158b99"
+      url "https://github.com/ory/cli/releases/download/v0.0.78/ory_0.0.78-macOS-sqlite_64-bit.tar.gz"
+      sha256 "305323bd29509308cdf213c10c5bae0fe023d8e25f74d55a9abc0f0de59e8c9b"
 
       def install
         bin.install "ory"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ory/cli/releases/download/v0.0.77/ory_0.0.77-macOS-sqlite_arm64.tar.gz"
-      sha256 "d705272f276ca53aabe068396074db5c8744b22555d56d0da2a84e7d0f1ddc35"
+      url "https://github.com/ory/cli/releases/download/v0.0.78/ory_0.0.78-macOS-sqlite_arm64.tar.gz"
+      sha256 "0efedd3f4e7d459699d4f2a9cfbc41debb52e68efdde0b31b6fd28d1047914ea"
 
       def install
         bin.install "ory"
