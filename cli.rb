@@ -5,22 +5,48 @@
 class Cli < Formula
   desc "Interface with Ory using this CLI!"
   homepage "https://www.ory.sh"
-  version "0.0.78"
+  version "0.0.79"
   license "Apache-2.0"
-  depends_on :macos
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ory/cli/releases/download/v0.0.78/ory_0.0.78-macOS-sqlite_64-bit.tar.gz"
-      sha256 "305323bd29509308cdf213c10c5bae0fe023d8e25f74d55a9abc0f0de59e8c9b"
+      url "https://github.com/ory/cli/releases/download/v0.0.79/ory_0.0.79-macOS-sqlite_64-bit.tar.gz"
+      sha256 "5a1566c2b4cf203854a2c4f92b0b660843cb198a1cceedbd2eb92ab588deb0f6"
 
       def install
         bin.install "ory"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ory/cli/releases/download/v0.0.78/ory_0.0.78-macOS-sqlite_arm64.tar.gz"
-      sha256 "0efedd3f4e7d459699d4f2a9cfbc41debb52e68efdde0b31b6fd28d1047914ea"
+      url "https://github.com/ory/cli/releases/download/v0.0.79/ory_0.0.79-macOS-sqlite_arm64.tar.gz"
+      sha256 "bd99ccf886667f14ec1eabf722379985bb77a5ed67464ef22b11c312c7091f27"
+
+      def install
+        bin.install "ory"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/ory/cli/releases/download/v0.0.79/ory_0.0.79-linux-sqlite_64-bit.tar.gz"
+      sha256 "51fa854cc69b5ef67d955645b5a19dd5f162728248e6c4dc234c747724327d75"
+
+      def install
+        bin.install "ory"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ory/cli/releases/download/v0.0.79/ory_0.0.79-linux-sqlite_arm64.tar.gz"
+      sha256 "92d66974851dc1c3768e0c72717024170c6ffee53e15ed5997ddf83335b7c6c9"
+
+      def install
+        bin.install "ory"
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/ory/cli/releases/download/v0.0.79/ory_0.0.79-linux-sqlite_armv6.tar.gz"
+      sha256 "184e3a5984805b93601313dac36134189b941db1e89ed29655ef1555358a8bf7"
 
       def install
         bin.install "ory"
