@@ -8,6 +8,14 @@ class Hydra < Formula
   version "1.10.7"
 
   on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/ory/hydra/releases/download/v1.10.7/hydra_1.10.7-sqlite_macos_64bit.tar.gz"
+      sha256 "a84504417320894d75159fb26d3a7a3579fe393f9865deb6e1fb1d83131160ee"
+
+      def install
+        bin.install "hydra"
+      end
+    end
     if Hardware::CPU.intel?
       url "https://github.com/ory/hydra/releases/download/v1.10.7/hydra_1.10.7-sqlite_macos_64bit.tar.gz"
       sha256 "a84504417320894d75159fb26d3a7a3579fe393f9865deb6e1fb1d83131160ee"
