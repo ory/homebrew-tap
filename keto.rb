@@ -5,21 +5,21 @@
 class Keto < Formula
   desc "The Ory Authorization Server (Ory Keto)"
   homepage "https://www.ory.sh"
-  version "0.8.0-alpha.0"
+  version "0.8.0-alpha.1"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/ory/keto/releases/download/v0.8.0-alpha.0/keto_0.8.0-alpha.0-macOS_sqlite_arm64.tar.gz"
-      sha256 "837ce76a469460abcc4178ba883cae1619877bc69ee8282829a7c5728f3fffcb"
+    if Hardware::CPU.intel?
+      url "https://github.com/ory/keto/releases/download/v0.8.0-alpha.1/keto_0.8.0-alpha.1-macOS_sqlite_64bit.tar.gz"
+      sha256 "e0e6d87b574ec0daf42ec18944ccbd404745be77439bfa20bc06689b03aba2e5"
 
       def install
         bin.install "keto"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/ory/keto/releases/download/v0.8.0-alpha.0/keto_0.8.0-alpha.0-macOS_sqlite_64bit.tar.gz"
-      sha256 "50bc4f5a6cad02741f025549468cd000fec69bb400f4ee7f6a65f9016641b3e9"
+    if Hardware::CPU.arm?
+      url "https://github.com/ory/keto/releases/download/v0.8.0-alpha.1/keto_0.8.0-alpha.1-macOS_sqlite_arm64.tar.gz"
+      sha256 "aae0a6fe5ea6b9582ce0cdece6b6b80115128dcf0f5e0ffcc85be14c81bb11f2"
 
       def install
         bin.install "keto"
@@ -28,25 +28,25 @@ class Keto < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/ory/keto/releases/download/v0.8.0-alpha.0/keto_0.8.0-alpha.0-linux_sqlite_armv6.tar.gz"
-      sha256 "e41915594134b7fa0bee86b3a743123620add2732b92a2ab98d72bb25c3230d1"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ory/keto/releases/download/v0.8.0-alpha.1/keto_0.8.0-alpha.1-linux_sqlite_arm64.tar.gz"
+      sha256 "be14a121bb20a6158b74d1ffcaa30ce688e4e338800a1cd32cccbfc84539177f"
 
       def install
         bin.install "keto"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ory/keto/releases/download/v0.8.0-alpha.0/keto_0.8.0-alpha.0-linux_sqlite_64bit.tar.gz"
-      sha256 "82e58c268f67af58f681bb86dccd4784de76cee90d641ff3011e119a0f1b9c9a"
+      url "https://github.com/ory/keto/releases/download/v0.8.0-alpha.1/keto_0.8.0-alpha.1-linux_sqlite_64bit.tar.gz"
+      sha256 "6962246032a56a0eff9283135a3445d8cff4ac91fc44bbae28fd046b01da7788"
 
       def install
         bin.install "keto"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ory/keto/releases/download/v0.8.0-alpha.0/keto_0.8.0-alpha.0-linux_sqlite_arm64.tar.gz"
-      sha256 "c3833885b1baebdfb812981785c04e5ca6872b61e90cb9398b34715273ca8a90"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/ory/keto/releases/download/v0.8.0-alpha.1/keto_0.8.0-alpha.1-linux_sqlite_armv6.tar.gz"
+      sha256 "4baeaf31916a6d5e16c0fca1720b4c458b92595ce4d023b4ecc4ca955b4b2629"
 
       def install
         bin.install "keto"
