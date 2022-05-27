@@ -5,21 +5,21 @@
 class Cli < Formula
   desc "Use Ory from the your terminal!"
   homepage "https://www.ory.sh"
-  version "0.1.32"
+  version "0.1.33"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ory/cli/releases/download/v0.1.32/ory_0.1.32-macOS_sqlite_64bit.tar.gz"
-      sha256 "9e4343b272190a63b9a47290f01ebf9511dcf24ed8687963a3d68ae89e4b6efc"
+      url "https://github.com/ory/cli/releases/download/v0.1.33/ory_0.1.33-macOS_sqlite_64bit.tar.gz"
+      sha256 "20e7f7114f7416f20ebf5147b7eeed468d5566f8d1fe555181f3dc94424ec526"
 
       def install
         bin.install "ory"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ory/cli/releases/download/v0.1.32/ory_0.1.32-macOS_sqlite_arm64.tar.gz"
-      sha256 "5ebf407ffe3c140e0fad2099bcc1893cfd700d9c35191236bfec6c7e149dad8e"
+      url "https://github.com/ory/cli/releases/download/v0.1.33/ory_0.1.33-macOS_sqlite_arm64.tar.gz"
+      sha256 "19adddd5c01eeceafe165065b40545f8211d470d3e020cd538cb5c68588a9576"
 
       def install
         bin.install "ory"
@@ -28,25 +28,25 @@ class Cli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/ory/cli/releases/download/v0.1.32/ory_0.1.32-linux_sqlite_64bit.tar.gz"
-      sha256 "8e8863969a7083eb53b44f9f2a7e11c4a2d585ce17cea58a7c6c45dd4722ff79"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/ory/cli/releases/download/v0.1.33/ory_0.1.33-linux_sqlite_armv6.tar.gz"
+      sha256 "19ff0b6c2ce82790c334fdb38675adddd3261cfa4d1a016bf945a42e96e6d826"
 
       def install
         bin.install "ory"
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/ory/cli/releases/download/v0.1.32/ory_0.1.32-linux_sqlite_armv6.tar.gz"
-      sha256 "3b4245cd817bdc8e6990ff9bbc0c15ea1f1b2a6eb0ab300944a1f39d3c469852"
+    if Hardware::CPU.intel?
+      url "https://github.com/ory/cli/releases/download/v0.1.33/ory_0.1.33-linux_sqlite_64bit.tar.gz"
+      sha256 "60525c8af7d75f80d296bec81fcff8575932d9968a080586da6a398a8f92ff0b"
 
       def install
         bin.install "ory"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ory/cli/releases/download/v0.1.32/ory_0.1.32-linux_sqlite_arm64.tar.gz"
-      sha256 "b6cb161f94f00a9d244085b31cbf2a3e033a09b7add6054b9f80a3e6d399ea48"
+      url "https://github.com/ory/cli/releases/download/v0.1.33/ory_0.1.33-linux_sqlite_arm64.tar.gz"
+      sha256 "54e8cfec0026e3f15b5cba4e0b860c5869c3641d9c3ac940a8c860c8b2691454"
 
       def install
         bin.install "ory"
