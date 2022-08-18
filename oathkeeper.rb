@@ -5,21 +5,21 @@
 class Oathkeeper < Formula
   desc "The Ory Identity and Access Proxy (Ory Oathkeeper)"
   homepage "https://www.ory.sh"
-  version "0.39.2"
+  version "0.39.3-pre.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ory/oathkeeper/releases/download/v0.39.2/oathkeeper_0.39.2-macOS_sqlite_arm64.tar.gz"
-      sha256 "4292b0583f0bc230292ac44b721a7cefc76f3783c6e4bd69a5d018d24439118f"
+      url "https://github.com/ory/oathkeeper/releases/download/v0.39.3-pre.0/oathkeeper_0.39.3-pre.0-macOS_sqlite_arm64.tar.gz"
+      sha256 "a4e914c976c57dc5112e023f2cff24d4b0d466744c65a58ca8e2c1cec936a906"
 
       def install
         bin.install "oathkeeper"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ory/oathkeeper/releases/download/v0.39.2/oathkeeper_0.39.2-macOS_sqlite_64bit.tar.gz"
-      sha256 "042d340d59d1680e5ffec58bfcabd14300cddb18ea1d19bd775fe5a1169413f1"
+      url "https://github.com/ory/oathkeeper/releases/download/v0.39.3-pre.0/oathkeeper_0.39.3-pre.0-macOS_sqlite_64bit.tar.gz"
+      sha256 "f15a83f86ebf63e3985cdca6090a8861d4065403e7bae221524efe6f5418c439"
 
       def install
         bin.install "oathkeeper"
@@ -29,24 +29,24 @@ class Oathkeeper < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ory/oathkeeper/releases/download/v0.39.2/oathkeeper_0.39.2-linux_sqlite_arm64.tar.gz"
-      sha256 "a087483899477e7f4d4bc01256cc1be87f34e175e84dd86f257042b5acdc0d88"
+      url "https://github.com/ory/oathkeeper/releases/download/v0.39.3-pre.0/oathkeeper_0.39.3-pre.0-linux_sqlite_arm64.tar.gz"
+      sha256 "2ec39f9886d5277df7ce3c45bf3f6a5f2cfd1739203253dc18bf7a95214912af"
 
       def install
         bin.install "oathkeeper"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ory/oathkeeper/releases/download/v0.39.2/oathkeeper_0.39.2-linux_sqlite_64bit.tar.gz"
-      sha256 "304770ffbde6b15ed584df013d788428f98357ebc36b0da3fe25eee7d669f369"
+      url "https://github.com/ory/oathkeeper/releases/download/v0.39.3-pre.0/oathkeeper_0.39.3-pre.0-linux_sqlite_64bit.tar.gz"
+      sha256 "f53f435620b9a6039630dd14e600805c94568d5ffcf4bea017d89a63b88465b0"
 
       def install
         bin.install "oathkeeper"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/ory/oathkeeper/releases/download/v0.39.2/oathkeeper_0.39.2-linux_sqlite_armv6.tar.gz"
-      sha256 "f881a81b700e041ab845fa593aa112bb07ee8088a94591063a945c5edaf56b91"
+      url "https://github.com/ory/oathkeeper/releases/download/v0.39.3-pre.0/oathkeeper_0.39.3-pre.0-linux_sqlite_armv6.tar.gz"
+      sha256 "c91c264ed43e7376410e4f759323e5b9ea0a9cd5ff88f03cca9e964442b9a05e"
 
       def install
         bin.install "oathkeeper"
