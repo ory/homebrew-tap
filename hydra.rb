@@ -5,21 +5,21 @@
 class Hydra < Formula
   desc "The Ory OAuth2 and OpenID Connect Platform (Ory Hydra)"
   homepage "https://www.ory.sh"
-  version "2.2.0"
+  version "2.3.0-pre.1"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/ory/hydra/releases/download/v2.2.0/hydra_2.2.0-macOS_sqlite_arm64.tar.gz"
-      sha256 "89732ad1494c57ea39348f62dc5ef5c48de129cd205b17cb12bb67ad27094bb7"
+    if Hardware::CPU.intel?
+      url "https://github.com/ory/hydra/releases/download/v2.3.0-pre.1/hydra_2.3.0-pre.1-macOS_sqlite_64bit.tar.gz"
+      sha256 "07721b54a9159270c091fd5d137edfdd17bf326973fcccb34b133ad978d7d858"
 
       def install
         bin.install "hydra"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/ory/hydra/releases/download/v2.2.0/hydra_2.2.0-macOS_sqlite_64bit.tar.gz"
-      sha256 "3d40ca8e99e2a6d840130928d5e0245212dba0eea9c26a0d7186ebb4382e673d"
+    if Hardware::CPU.arm?
+      url "https://github.com/ory/hydra/releases/download/v2.3.0-pre.1/hydra_2.3.0-pre.1-macOS_sqlite_arm64.tar.gz"
+      sha256 "f0b19c5a4ba2adfa0e272d262f4b6942bd4ba28aaf3689aea976c7d18a883c68"
 
       def install
         bin.install "hydra"
@@ -28,28 +28,34 @@ class Hydra < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/ory/hydra/releases/download/v2.2.0/hydra_2.2.0-linux_sqlite_armv6.tar.gz"
-      sha256 "871761a695e67cdd338970c16b7a6d55a66cfa78190a1636be36f6343038e7c7"
-
-      def install
-        bin.install "hydra"
-      end
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ory/hydra/releases/download/v2.2.0/hydra_2.2.0-linux_sqlite_arm64.tar.gz"
-      sha256 "c499ffdaae0f2ab85eff0567214734515b741a393bef89115c16018f4dc0560d"
-
-      def install
-        bin.install "hydra"
-      end
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/ory/hydra/releases/download/v2.2.0/hydra_2.2.0-linux_sqlite_64bit.tar.gz"
-      sha256 "0fe0539fa452496ac5d98b558f93eb2dbb4cf43733da0b09f8f2bdb4445fc31e"
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/ory/hydra/releases/download/v2.3.0-pre.1/hydra_2.3.0-pre.1-linux_sqlite_64bit.tar.gz"
+        sha256 "0d5604de650c638c084dc5d256678a491e9b76551da865c86c4ff52faf36411b"
 
-      def install
-        bin.install "hydra"
+        def install
+          bin.install "hydra"
+        end
+      end
+    end
+    if Hardware::CPU.arm?
+      if !Hardware::CPU.is_64_bit?
+        url "https://github.com/ory/hydra/releases/download/v2.3.0-pre.1/hydra_2.3.0-pre.1-linux_sqlite_armv6.tar.gz"
+        sha256 "0f9b96d405d7a924a8bba3dbc6a87bcf0511b949560d5f4a7f4a13934b205db8"
+
+        def install
+          bin.install "hydra"
+        end
+      end
+    end
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/ory/hydra/releases/download/v2.3.0-pre.1/hydra_2.3.0-pre.1-linux_sqlite_arm64.tar.gz"
+        sha256 "f02c11400103180719deed581a64ccd2184c91d1c604ccbb455f6a2574fe4293"
+
+        def install
+          bin.install "hydra"
+        end
       end
     end
   end
