@@ -11,7 +11,7 @@ class Oathkeeper < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/ory/oathkeeper/releases/download/v25.4.0-pre.0/oathkeeper_25.4.0-pre.0-macOS_sqlite_64bit.tar.gz"
-      sha256 "0435452bfaa71a7606d1ba3e4f080a9f60662b941778faefdd09a8f20971cd18"
+      sha256 "1d49c9f241388c92ae51860f240b32ed8adf20393175a97c5e3c4937b1cc9fa3"
 
       def install
         bin.install "oathkeeper"
@@ -19,7 +19,7 @@ class Oathkeeper < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/ory/oathkeeper/releases/download/v25.4.0-pre.0/oathkeeper_25.4.0-pre.0-macOS_sqlite_arm64.tar.gz"
-      sha256 "c1d20474366c262367fbad3f02736c3e020b3dcf00e235da6cffd1922037fe70"
+      sha256 "614918aaa7b751fb1c04d72131422df77387a8feb212622e3163ba0f6b521323"
 
       def install
         bin.install "oathkeeper"
@@ -30,21 +30,21 @@ class Oathkeeper < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/ory/oathkeeper/releases/download/v25.4.0-pre.0/oathkeeper_25.4.0-pre.0-linux_sqlite_64bit.tar.gz"
-      sha256 "62507779ccb31b1f5445f8d42dee44941b8eceb4b5ab0bac3cbd11cae0b58323"
+      sha256 "fa34fb91affaa69e547be95ad98bdd01833b8c9f9ab4793d7a3e53e32fdd258f"
       def install
         bin.install "oathkeeper"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/ory/oathkeeper/releases/download/v25.4.0-pre.0/oathkeeper_25.4.0-pre.0-linux_sqlite_armv6.tar.gz"
-      sha256 "48e6cffc275cd45289c28e44e397bac62698147092caa6798e25d1340d2c7cf8"
+      sha256 "935c6ef30a5d484454b0536f19bd5b845765e0a4d82670b862d01734cc6841cc"
       def install
         bin.install "oathkeeper"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/ory/oathkeeper/releases/download/v25.4.0-pre.0/oathkeeper_25.4.0-pre.0-linux_sqlite_arm64.tar.gz"
-      sha256 "8eaa0f8dadbafd60b8a4905d3cb180d89f425dab487923d4465dea589a4114fa"
+      sha256 "be2ad061b233ad702335f5cde4a2e7549640542f647a18d397e697d104dd0f33"
       def install
         bin.install "oathkeeper"
       end
