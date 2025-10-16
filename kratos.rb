@@ -11,7 +11,7 @@ class Kratos < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/ory/kratos/releases/download/v25.4.0-pre.0/kratos_25.4.0-pre.0-macOS_sqlite_64bit.tar.gz"
-      sha256 "128db5f3a3804464b9e841acbcf5f31722a604bc432a4b1b2e43fe52e7bfd981"
+      sha256 "94b5e326e0bfe688ceccc60d96bd3991bc73de22a22eb93282512974ee73dde1"
 
       def install
         bin.install "kratos"
@@ -19,7 +19,7 @@ class Kratos < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/ory/kratos/releases/download/v25.4.0-pre.0/kratos_25.4.0-pre.0-macOS_sqlite_arm64.tar.gz"
-      sha256 "f442a1046978f640fb6fcf03719f58aaabd30898a88ada8b39fefbaa7dd14357"
+      sha256 "a7a57ceda9388a97fc7661e9b47546dda886320c2c7d19a01b699f031156e208"
 
       def install
         bin.install "kratos"
@@ -30,21 +30,21 @@ class Kratos < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/ory/kratos/releases/download/v25.4.0-pre.0/kratos_25.4.0-pre.0-linux_sqlite_64bit.tar.gz"
-      sha256 "691d291bad2197007af8b03b2bf1b05240d700612497e7c050f2725022725045"
+      sha256 "9813f27d8c8a37f66373883a717af2c7625a1ba15a76995be7d442a14236cd4d"
       def install
         bin.install "kratos"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/ory/kratos/releases/download/v25.4.0-pre.0/kratos_25.4.0-pre.0-linux_sqlite_armv6.tar.gz"
-      sha256 "c1492e6c29561877a4207c95688c0cbbde5b195173d7edc48c2d830036b4a18f"
+      sha256 "0ef7104353605c307d46f57725e97b13c1f35556b304413a223e50fd7ca7e978"
       def install
         bin.install "kratos"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/ory/kratos/releases/download/v25.4.0-pre.0/kratos_25.4.0-pre.0-linux_sqlite_arm64.tar.gz"
-      sha256 "9e495db9f7285ad64712a104fee1f55174e054798eb6ec4610d8b5a0cc7f1bed"
+      sha256 "558f0aa076b73ca8487ac47a5aaa3b1d17616e19cde132a458fb444eb7c813ca"
       def install
         bin.install "kratos"
       end
