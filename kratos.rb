@@ -5,23 +5,23 @@
 class Kratos < Formula
   desc "The Ory Identity Platform (Ory Kratos)"
   homepage "https://www.ory.sh"
-  version "25.4.0"
+  version "26.2.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ory/kratos/releases/download/v25.4.0/kratos_25.4.0-macOS_sqlite_64bit.tar.gz"
-      sha256 "83cadd3b0fa70a8edf4d4527920d40281d2d0fe706d53b4446abd4bed0e741d4"
+      url "https://github.com/ory/kratos/releases/download/v26.2.0/kratos_26.2.0-macOS_sqlite_64bit.tar.gz"
+      sha256 "0ac76d0ad85fe452e711a2aafe56b49b0f5d1a57200f4464dcb48e7267c94062"
 
-      def install
+      define_method(:install) do
         bin.install "kratos"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ory/kratos/releases/download/v25.4.0/kratos_25.4.0-macOS_sqlite_arm64.tar.gz"
-      sha256 "9ce18842b162deeaf97d2f92a5d74dcf63079a83819fe91357d030c37b94cb27"
+      url "https://github.com/ory/kratos/releases/download/v26.2.0/kratos_26.2.0-macOS_sqlite_arm64.tar.gz"
+      sha256 "e198d84bde6e4b7c68714cdad00c8800edd88c2311adde8b08ea5469cea263ec"
 
-      def install
+      define_method(:install) do
         bin.install "kratos"
       end
     end
@@ -29,23 +29,23 @@ class Kratos < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ory/kratos/releases/download/v25.4.0/kratos_25.4.0-linux_sqlite_64bit.tar.gz"
-      sha256 "b14017921a078eb567ab1b66dbd2b9163737e54d21b549b259a212f60ee61e26"
-      def install
+      url "https://github.com/ory/kratos/releases/download/v26.2.0/kratos_26.2.0-linux_sqlite_64bit.tar.gz"
+      sha256 "c80113f2c861b2fbd80290697d1380000111e297716018617423cca7f2e7e668"
+      define_method(:install) do
         bin.install "kratos"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/ory/kratos/releases/download/v25.4.0/kratos_25.4.0-linux_sqlite_armv6.tar.gz"
-      sha256 "e6e08b9f97d8091e48aa57c3b946725862780808523e1c4c6a9ddeeb1d8e039d"
-      def install
+      url "https://github.com/ory/kratos/releases/download/v26.2.0/kratos_26.2.0-linux_sqlite_armv6.tar.gz"
+      sha256 "0b3ff01726cfaaa6da5d2a3ebaf97bf395c39c3abcdcc31c7daded142a30c536"
+      define_method(:install) do
         bin.install "kratos"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ory/kratos/releases/download/v25.4.0/kratos_25.4.0-linux_sqlite_arm64.tar.gz"
-      sha256 "3574761ab9a396b065588967bae4f78b7f3a19329f1c64018f5c550ce04e9d38"
-      def install
+      url "https://github.com/ory/kratos/releases/download/v26.2.0/kratos_26.2.0-linux_sqlite_arm64.tar.gz"
+      sha256 "fd2cedebc4034ad1aef726f64665052c809fb05f86968e9c8a36372d7578e865"
+      define_method(:install) do
         bin.install "kratos"
       end
     end
