@@ -5,21 +5,21 @@
 class Talos < Formula
   desc "The Ory API Credential Management Platform (Ory Talos)"
   homepage "https://www.ory.sh"
-  version "0.0.0-alpha.1.pre.3"
+  version "0.0.0-alpha.1.pre.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ory/talos/releases/download/v0.0.0-alpha.1.pre.3/talos_0.0.0-alpha.1.pre.3-macOS_sqlite_64bit.tar.gz"
-      sha256 "39c29476d42cd3c5790e8fa07320d935a1a60975353c7ef93205277b9521c377"
+      url "https://github.com/ory/talos/releases/download/v0.0.0-alpha.1.pre.4/talos_0.0.0-alpha.1.pre.4-macOS_sqlite_64bit.tar.gz"
+      sha256 "dd7ca11709cbfb042280ec4a20dce2462da13ebaab41f534998422a446724541"
 
       define_method(:install) do
         bin.install "talos"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ory/talos/releases/download/v0.0.0-alpha.1.pre.3/talos_0.0.0-alpha.1.pre.3-macOS_sqlite_arm64.tar.gz"
-      sha256 "32df6c1d281b8b05cac8cf9d2e0b0ef75bd843bbf4ec316fcb50970b06cb24cf"
+      url "https://github.com/ory/talos/releases/download/v0.0.0-alpha.1.pre.4/talos_0.0.0-alpha.1.pre.4-macOS_sqlite_arm64.tar.gz"
+      sha256 "37c20a331fcfe6af0de2ed2f69a1442e4da2d1385769fb30138052206b3ff2ce"
 
       define_method(:install) do
         bin.install "talos"
@@ -29,22 +29,22 @@ class Talos < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ory/talos/releases/download/v0.0.0-alpha.1.pre.3/talos_0.0.0-alpha.1.pre.3-linux_sqlite_64bit.tar.gz"
-      sha256 "8cffe304cc7d3e548cbe718ac35c47c0c48b48ada4fb6fdd292c44113f75f09f"
+      url "https://github.com/ory/talos/releases/download/v0.0.0-alpha.1.pre.4/talos_0.0.0-alpha.1.pre.4-linux_sqlite_64bit.tar.gz"
+      sha256 "e8201028e1b00211f00c13412338b4ae2fffa9e6e8e82d724b53125e79cf7dff"
       define_method(:install) do
         bin.install "talos"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/ory/talos/releases/download/v0.0.0-alpha.1.pre.3/talos_0.0.0-alpha.1.pre.3-linux_sqlite_armv6.tar.gz"
-      sha256 "b9940b1ccc676bda575a604efef1aeeb2e99dc1c75c1c24d0c83bb2fbf0ad765"
+      url "https://github.com/ory/talos/releases/download/v0.0.0-alpha.1.pre.4/talos_0.0.0-alpha.1.pre.4-linux_sqlite_armv6.tar.gz"
+      sha256 "6470dc58daa03aaa0af69a6097586b03db0a0531a1711be23722462190f82e35"
       define_method(:install) do
         bin.install "talos"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ory/talos/releases/download/v0.0.0-alpha.1.pre.3/talos_0.0.0-alpha.1.pre.3-linux_sqlite_arm64.tar.gz"
-      sha256 "ad59f310359f2595a86df5ac0003b92f8d4fc5efddd7dd7d9388303b6b29e340"
+      url "https://github.com/ory/talos/releases/download/v0.0.0-alpha.1.pre.4/talos_0.0.0-alpha.1.pre.4-linux_sqlite_arm64.tar.gz"
+      sha256 "05fe172d966e9cb7bfd6490b019564fd2fe3f3859f3e2e2322f485cc94266c57"
       define_method(:install) do
         bin.install "talos"
       end
