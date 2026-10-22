@@ -5,28 +5,28 @@
 class OryAgent < Formula
   desc "Deploy and manage Ory Agent Security runtime identities"
   homepage "https://www.ory.com/"
-  version "1.5.2"
+  version "1.5.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ory/ory-agent/releases/download/v1.5.2/ory-agent_1.5.2_darwin_amd64.tar.gz"
-      sha256 "3af13fe7de673180a8e0e6b6b9d193ede080d3a709b4d2f6051c8285bc7adf38"
+      url "https://github.com/ory/ory-agent/releases/download/v1.5.3/ory-agent_1.5.3_darwin_amd64.tar.gz"
+      sha256 "1a3e4daa2209e9cf0c1c3eefd03d3b80811004590b8750ab26bec2be2caa66b7"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ory/ory-agent/releases/download/v1.5.2/ory-agent_1.5.2_darwin_arm64.tar.gz"
-      sha256 "cb88bf330d541fe4532e415b33eba396ab651724ce32eb75cf71c2eca00c7ee6"
+      url "https://github.com/ory/ory-agent/releases/download/v1.5.3/ory-agent_1.5.3_darwin_arm64.tar.gz"
+      sha256 "95479e658477e4b3197843368555353ec20fbbbab6f067e4d8bc9cc8ffaa72c4"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ory/ory-agent/releases/download/v1.5.2/ory-agent_1.5.2_linux_amd64.tar.gz"
-      sha256 "2005f189b443e578cd3e31ca1c9e3f3196c2cf43f003f8764d877e5d0ef1a491"
+      url "https://github.com/ory/ory-agent/releases/download/v1.5.3/ory-agent_1.5.3_linux_amd64.tar.gz"
+      sha256 "08e9b00f93e5f9bfc45dc8c249627ba08577c561aac73485d4367565385dc245"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ory/ory-agent/releases/download/v1.5.2/ory-agent_1.5.2_linux_arm64.tar.gz"
-      sha256 "3437b8eb9b59ac646b63c86d5533bc03f61a1ceb9b936d87d8165773b21ec321"
+      url "https://github.com/ory/ory-agent/releases/download/v1.5.3/ory-agent_1.5.3_linux_arm64.tar.gz"
+      sha256 "5e2f421e85f9bdf75a240315c71cbfa40bee8cd4b15430fb8c25f0e6c1a9b9d2"
     end
   end
 
